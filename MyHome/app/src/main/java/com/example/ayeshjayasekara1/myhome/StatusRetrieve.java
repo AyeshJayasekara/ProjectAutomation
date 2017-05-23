@@ -14,7 +14,7 @@ import java.net.URLEncoder;
 
 public class StatusRetrieve {
         private String username;
-        private static final String URLLink = "http://192.168.8.102/test/stat.php";
+        private static final String URLLink = "http://192.168.8.101/test/stat.php";
 
     public StatusRetrieve(String username) {
         this.username = username;

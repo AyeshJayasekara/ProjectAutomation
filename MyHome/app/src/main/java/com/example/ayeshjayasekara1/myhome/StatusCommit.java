@@ -15,7 +15,7 @@ import java.net.URLEncoder;
 public class StatusCommit {
 
     private String username;
-    private static final String URLLink = "http://192.168.8.102/test/comit.php";
+    private static final String URLLink = "http://192.168.8.101/test/comit.php";
     private int[] CommitArray=null;
 
     public StatusCommit(String username) {

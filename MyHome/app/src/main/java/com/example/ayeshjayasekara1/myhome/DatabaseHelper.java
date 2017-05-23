@@ -16,7 +16,7 @@ public class DatabaseHelper {
     private String username;
     private String password;
 
-    private static final String URLLink = "http://192.168.8.102/test/index.php";
+    private static final String URLLink = "http://192.168.8.101/test/index.php";
     private static String EncriptedPassword;
     private BCrypt crip;
 

@@ -1,8 +1,10 @@
 package com.example.ayeshjayasekara1.myhome;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         if(b2 != null)
         {
             username = b2.getString("user");
+
         }
         textView = (TextView) findViewById(R.id.textView2);
         AC = (ToggleButton) findViewById(R.id.ac);
@@ -37,6 +40,19 @@ public class MainActivity extends AppCompatActivity {
 
         RetrieveTask t = new RetrieveTask();
         t.execute((Void) null);
+
+        LIGHTS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,LightActivity.class);
+                Bundle b1 = new Bundle();
+                b1.putInt("Light1",ControllerArray[0]);
+                b1.putInt("Light2",ControllerArray[1]);
+                b1.putString("username",username);
+                in.putExtras(b1);
+                startActivity(in);
+            }
+        });
 
         DOOR.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
